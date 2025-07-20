@@ -1,7 +1,7 @@
 {
-    "name": "vrchat.jordo.EasyPlatformSwitch.Editor",
+    "name": "vrckmart.easyplatformswitch.Editor",
     "references": [
-        "vrchat.jordo.EasyPlatformSwitch"
+        "vrckmart.easyplatformswitch"
     ],
     "includePlatforms": [
         "Editor"
