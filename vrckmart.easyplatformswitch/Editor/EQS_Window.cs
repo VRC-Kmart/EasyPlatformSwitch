@@ -14,10 +14,10 @@ namespace EasyPlatformSwitch
     {
         private const string version = "1.4.0";
         
-        [MenuItem("Window/Easy Quest Switch")]
+        [MenuItem("Window/EasyPlatformSwitch")]
         public static void ShowWindow()
         {
-            GetWindow(typeof(EQS_Window), false, "Easy Quest Switch");
+            GetWindow(typeof(EQS_Window), false, "EasyPlatformSwitch");
         }
 
         private SerializedObject serializedObject;
