@@ -1,7 +1,7 @@
 {
   "name": "vrckmart.easyplatformswitch",
   "displayName": "EasyPlatformSwitch",
-  "version": "1.0.0",
+  "version": "1.40.0",
   "unity" : "2019.4",
   "description": "EasyPlatformSwitch is a Unity editor tool developed for VRChat world creators, it can automate changes to components within a scene as soon as the build platform is changed from PC to Android or iOS and vice versa.",
   "author" : {
