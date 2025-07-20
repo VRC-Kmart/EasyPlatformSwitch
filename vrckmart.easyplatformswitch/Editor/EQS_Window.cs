@@ -520,8 +520,7 @@ namespace EasyPlatformSwitch
                     using (new GUILayout.HorizontalScope())
                     {
                         GUILayout.Box(EQS_Localization.Current.SettingsFeedback, EditorStyles.wordWrappedLabel);
-                        if (GUILayout.Button(EQS_Localization.Current.SettingsTwitter, GUILayout.ExpandHeight(true))) Application.OpenURL("https://twitter.com/JordoVR");
-                        if (GUILayout.Button(EQS_Localization.Current.SettingsGithub, GUILayout.ExpandHeight(true))) Application.OpenURL("https://github.com/JordoVR/EasyPlatformSwitch");
+                        if (GUILayout.Button(EQS_Localization.Current.SettingsGithub, GUILayout.ExpandHeight(true))) Application.OpenURL("https://github.com/VRC-Kmart/EasyPlatformSwitch/");
                     }
 
                 }
