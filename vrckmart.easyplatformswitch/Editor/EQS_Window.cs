@@ -359,7 +359,7 @@ namespace EasyPlatformSwitch
                     GUILayout.FlexibleSpace();
                     Color guiBackgroundColor = GUI.backgroundColor;
                     GUI.backgroundColor = new Color(1,1,1,0);
-                    GUILayout.Box(logo, GUILayout.Width(150), GUILayout.Height(70));
+                    GUILayout.Box(logo, GUILayout.Width(170), GUILayout.Height(70));
                     GUI.backgroundColor = guiBackgroundColor;
                     GUILayout.FlexibleSpace();
 
