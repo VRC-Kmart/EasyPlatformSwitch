@@ -12,7 +12,7 @@ namespace EasyPlatformSwitch
 
     public class EQS_Window : EditorWindow
     {
-        private const string version = "1.4.0";
+        private const string version = "1.0.1";
         
         [MenuItem("Window/EasyPlatformSwitch")]
         public static void ShowWindow()
