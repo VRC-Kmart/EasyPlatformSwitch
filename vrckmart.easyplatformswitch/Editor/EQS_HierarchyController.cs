@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace EasyQuestSwitch
+namespace EasyPlatformSwitch
 {
     public static class EQS_HierarchyController
     {

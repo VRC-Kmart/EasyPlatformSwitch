@@ -6,9 +6,9 @@ using VRC.SDK3.Components;
 #else
 using VRC.SDK3.Avatars.Components;
 #endif
-using EasyQuestSwitch.Fields;
+using EasyPlatformSwitch.Fields;
 
-namespace EasyQuestSwitch.Types
+namespace EasyPlatformSwitch.Types
 {
     [AddComponentMenu("")]
     public class Type_VRC_SpatialAudioSource : Type_Base

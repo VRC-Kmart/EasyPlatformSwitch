@@ -1,9 +1,9 @@
 ﻿#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
-using EasyQuestSwitch.Fields;
+using EasyPlatformSwitch.Fields;
 
-namespace EasyQuestSwitch.Types
+namespace EasyPlatformSwitch.Types
 {
     [AddComponentMenu("")]
     public class Type_Behaviour : Type_Base

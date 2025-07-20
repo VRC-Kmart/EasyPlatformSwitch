@@ -24,7 +24,7 @@
 	"SettingsHierarchyIconOffset": "Icon offset",
 	"SettingsPromptForPlatformChange": "Show prompt to apply EQS changes if a newly opened scene still uses setting from the opposite platform (Can cause issues with Bakery).",
 
-	"PopupDeleteWarning": "This will delete EasyQuestSwitch from the scene and all its data, are you sure?",
+	"PopupDeleteWarning": "This will delete EasyPlatformSwitch from the scene and all its data, are you sure?",
 	"PopupTargetChanged": "Your build target has changed since the last time you've opened this scene, apply EQS changes for {0}?\nThis can be done manually in the settings menu.",
 	"PopupAccept": "Yes",
 	"PopupDecline": "No",
@@ -38,6 +38,6 @@
 	"LogComponentExists": "This component is already present within EQS.",
 	"LogSwitchMissing": "Entry {0} target component is missing or not assigned.",
 	"LogSwitchFailure": "Entry {0} ({1}) encountered an error during the switching process: {2}.",
-	"LogSwitchSuccess": "EasyQuestSwitch applied the scene changes of build target {0}.",
+	"LogSwitchSuccess": "EasyPlatformSwitch applied the scene changes of build target {0}.",
 	"LogSwitchUnsupported": "Switched to an unsupported build target."
 }

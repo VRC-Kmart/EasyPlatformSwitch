@@ -7,7 +7,7 @@ using UnityEngine.Experimental.Rendering;
 using UnityEngine.Rendering;
 
 
-namespace EasyQuestSwitch.Fields
+namespace EasyPlatformSwitch.Fields
 {
     [Serializable]
     public class SharedObject<T>

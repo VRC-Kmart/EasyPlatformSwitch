@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace EasyQuestSwitch
+namespace EasyPlatformSwitch
 {
     public static class EQS_Localization
     {
@@ -67,7 +67,7 @@ namespace EasyQuestSwitch
             public string ListFold;
             public string ListDragAndDrop;
 
-            public string LogPrefix = "[EasyQuestSwitch] ";
+            public string LogPrefix = "[EasyPlatformSwitch] ";
             public string LogUnsupportedComponent;
             public string LogComponentExists;
             public string LogSwitchMissing;

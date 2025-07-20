@@ -24,7 +24,7 @@
 	"SettingsHierarchyIconOffset": "隐藏图标",
 	"SettingsPromptForPlatformChange": "是否打开场景更改时EQS弹出的应用变更提示 (与Bakery存在兼容性问题).",
 
-	"PopupDeleteWarning": "这将从场景及其所有数据中删除EasyQuestSwitch，您确定吗？",
+	"PopupDeleteWarning": "这将从场景及其所有数据中删除EasyPlatformSwitch，您确定吗？",
 	"PopupTargetChanged": "自上次打开此场景以来，生成目标已更改，是否为{0}应用EQS变更？\n这可以在设置菜单中手动完成。",
 	"PopupAccept": "是",
 	"PopupDecline": "否",
@@ -38,6 +38,6 @@
 	"LogComponentExists": "此组件已存在于EQS中。",
 	"LogSwitchMissing": "入口{0}目标组件丢失或未分配。",
 	"LogSwitchFailure": "入口{0}（{1}）在切换过程中遇到错误：{2}。",
-	"LogSwitchSuccess": "EasyQuestSwitch应用并生成{0}场景的更改。",
+	"LogSwitchSuccess": "EasyPlatformSwitch应用并生成{0}场景的更改。",
 	"LogSwitchUnsupported": "切换到不受支持的生成目标。"
 }

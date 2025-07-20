@@ -4,10 +4,10 @@ using UnityEditor;
 using UnityEditorInternal;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
-using EasyQuestSwitch.Fields;
+using EasyPlatformSwitch.Fields;
 using System.IO;
 
-namespace EasyQuestSwitch
+namespace EasyPlatformSwitch
 {
 
     public class EQS_Window : EditorWindow
@@ -521,7 +521,7 @@ namespace EasyQuestSwitch
                     {
                         GUILayout.Box(EQS_Localization.Current.SettingsFeedback, EditorStyles.wordWrappedLabel);
                         if (GUILayout.Button(EQS_Localization.Current.SettingsTwitter, GUILayout.ExpandHeight(true))) Application.OpenURL("https://twitter.com/JordoVR");
-                        if (GUILayout.Button(EQS_Localization.Current.SettingsGithub, GUILayout.ExpandHeight(true))) Application.OpenURL("https://github.com/JordoVR/EasyQuestSwitch");
+                        if (GUILayout.Button(EQS_Localization.Current.SettingsGithub, GUILayout.ExpandHeight(true))) Application.OpenURL("https://github.com/JordoVR/EasyPlatformSwitch");
                     }
 
                 }

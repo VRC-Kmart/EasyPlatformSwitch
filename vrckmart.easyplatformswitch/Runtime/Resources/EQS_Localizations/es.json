@@ -24,7 +24,7 @@
 	"SettingsHierarchyIconOffset": "Ajuste de posición del icono",
 	"SettingsPromptForPlatformChange": "Mostrar mensaje para aplicar cambios de EQS si una escena recién abierta todavía usa la configuración de la plataforma opuesta (puede causar problemas con Bakery).",
 
-	"PopupDeleteWarning": "Esto borrara EasyQuestSwitch de la escena y todos sus datos, ¿Estas seguro?",
+	"PopupDeleteWarning": "Esto borrara EasyPlatformSwitch de la escena y todos sus datos, ¿Estas seguro?",
 	"PopupTargetChanged": "Tu plataforma de compilacion ha cambiado desde la última vez que abriste esta escena, aplicar cambios para {0}?\nEsto puede ser hecho manualmente en el menú de ajustes.",
 	"PopupAccept": "Si",
 	"PopupDecline": "No",
@@ -38,6 +38,6 @@
 	"LogComponentExists": "Este componente ya está presente dentro de EQS.",
 	"LogSwitchMissing": "Entrada {0} falta el componente plataforma o no está asignado.",
 	"LogSwitchFailure": "Entrada {0} ({1}) se encontró un error durante el proceso de cambio: {2}.",
-	"LogSwitchSuccess": "EasyQuestSwitch aplico los cambios a la escena del plataforma de compilacion {0}.",
+	"LogSwitchSuccess": "EasyPlatformSwitch aplico los cambios a la escena del plataforma de compilacion {0}.",
 	"LogSwitchUnsupported": "Cambiado a una plataforma de compilacion no soportada."
 }

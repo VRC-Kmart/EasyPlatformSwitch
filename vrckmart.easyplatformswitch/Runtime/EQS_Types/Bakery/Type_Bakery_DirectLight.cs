@@ -1,9 +1,9 @@
 ﻿#if UNITY_EDITOR && BAKERY_INCLUDED
 using UnityEditor;
 using UnityEngine;
-using EasyQuestSwitch.Fields;
+using EasyPlatformSwitch.Fields;
 
-namespace EasyQuestSwitch.Types
+namespace EasyPlatformSwitch.Types
 {
     [AddComponentMenu("")]
     public class Type_Bakery_DirectLight : Type_Behaviour

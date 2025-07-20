@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace EasyQuestSwitch.Types
+namespace EasyPlatformSwitch.Types
 {
     [AddComponentMenu("")]
     public abstract class Type_Base : MonoBehaviour

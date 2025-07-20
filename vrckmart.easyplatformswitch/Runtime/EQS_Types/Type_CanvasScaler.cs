@@ -1,10 +1,10 @@
 ﻿#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
-using EasyQuestSwitch.Fields;
+using EasyPlatformSwitch.Fields;
 using UnityEngine.UI;
 
-namespace EasyQuestSwitch.Types
+namespace EasyPlatformSwitch.Types
 {
     [AddComponentMenu("")]
     public class Type_CanvasScaler : Type_Behaviour

@@ -5,12 +5,12 @@ using UnityEditor;
 using UnityEditor.Build;
 using UnityEngine;
 using Object = UnityEngine.Object;
-using EasyQuestSwitch.Types;
+using EasyPlatformSwitch.Types;
 using System.Reflection;
 using System.Linq;
 using System.Collections;
 
-namespace EasyQuestSwitch
+namespace EasyPlatformSwitch
 {
     [ExecuteInEditMode, AddComponentMenu("")]
     public class EQS_Data : MonoBehaviour
@@ -57,7 +57,7 @@ namespace EasyQuestSwitch
                     Objects[index].Foldout = false;
                 }
 
-                IEnumerable<Type> everyTypes = from t in Assembly.GetExecutingAssembly().GetTypes() where t.IsClass && t.Namespace == "EasyQuestSwitch.Types" select t;
+                IEnumerable<Type> everyTypes = from t in Assembly.GetExecutingAssembly().GetTypes() where t.IsClass && t.Namespace == "EasyPlatformSwitch.Types" select t;
                 for(int i = 0; i < everyTypes.Count(); i++)
                 {
                     FieldInfo field = everyTypes.ElementAt(i).GetField("type", BindingFlags.NonPublic | BindingFlags.Instance);
