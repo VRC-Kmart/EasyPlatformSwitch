@@ -7,6 +7,7 @@
 	"SettingsListFormat": "UIの形式",
 	"SettingsListFormatArray": [ "簡易 (高速)", "順番変更可能 (低速)" ],
 	"SettingsApplyPC": "PCの設定を強制的に適用",
+	"SettingsApplyiOS": "iOSの設定を強制的に適用",
 	"SettingsApplyQuest": "Questの設定を強制的に適用",
 	"SettingsRemoveEQS": "「EasyQuestSwitch」をSceneから削除",
 	"SettingsCacheWarning": "キャッシュサーバーが有効になっていない場合、切り替え時間が長くなる可能性があります。\nLocalかRemoteに設定するのがおすすめです。\n(Remoteの場合は追加の手順が必要です)",

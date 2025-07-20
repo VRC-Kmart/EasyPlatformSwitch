@@ -32,6 +32,18 @@ namespace EasyQuestSwitch.Types
             EnableSpatialization.Setup(component.EnableSpatialization);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Gain.iOS = Gain.Quest;
+                Far.iOS = Far.Quest;
+                Near.iOS = Near.Quest;
+                VolumetricRadius.iOS = VolumetricRadius.Quest;
+                EnableSpatialization.iOS = EnableSpatialization.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             VRCSpatialAudioSource component = (VRCSpatialAudioSource)type;

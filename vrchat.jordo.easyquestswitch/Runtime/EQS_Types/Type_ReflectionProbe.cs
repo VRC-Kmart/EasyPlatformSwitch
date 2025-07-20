@@ -31,6 +31,20 @@ namespace EasyQuestSwitch.Types
             Resolution.Setup((ReflectionProbeResolution)component.resolution);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            base.Upgrade(type, currentVersion);
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                ReflectionProbeType.iOS = ReflectionProbeType.Quest;
+                Cubemap.iOS = Cubemap.Quest;
+                Importance.iOS = Importance.Quest;
+                Intensity.iOS = Intensity.Quest;
+                BoxProjection.iOS = BoxProjection.Quest;
+                Resolution.iOS = Resolution.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             base.Process(type, buildTarget);

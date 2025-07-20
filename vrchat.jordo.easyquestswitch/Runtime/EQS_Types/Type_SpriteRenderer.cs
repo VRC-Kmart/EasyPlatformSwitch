@@ -23,6 +23,16 @@ namespace EasyQuestSwitch.Types
             Material.Setup(component.material);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Sprite.iOS = Sprite.Quest;
+                Color.iOS = Color.Quest;
+                Material.iOS = Material.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             SpriteRenderer component = (SpriteRenderer)type;

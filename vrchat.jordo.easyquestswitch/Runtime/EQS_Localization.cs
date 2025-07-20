@@ -40,6 +40,7 @@ namespace EasyQuestSwitch
             public string SettingsListFormat;
             public string[] SettingsListFormatArray;
             public string SettingsApplyPC;
+            public string SettingsApplyiOS;
             public string SettingsApplyQuest;
             public string SettingsRemoveEQS;
             public string SettingsCacheWarning;

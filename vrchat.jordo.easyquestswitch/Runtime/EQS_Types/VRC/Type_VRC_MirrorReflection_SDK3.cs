@@ -24,6 +24,15 @@ namespace EasyQuestSwitch.Types
             TurnOffMirrorOcclusion.Setup(component.TurnOffMirrorOcclusion);
             ReflectLayers.Setup(component.m_ReflectLayers);
         }
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                DisablePixelLights.iOS = DisablePixelLights.Quest;
+                TurnOffMirrorOcclusion.iOS = TurnOffMirrorOcclusion.Quest;
+                ReflectLayers.iOS = ReflectLayers.Quest;
+            }
+        }
 
         public override void Process(Object type, BuildTarget buildTarget)
         {

@@ -25,6 +25,17 @@ namespace EasyQuestSwitch.Types
             StaticEditorFlags.Setup(GameObjectUtility.GetStaticEditorFlags(component));
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Active.iOS = Active.Quest;
+                Tag.iOS = Tag.Quest;
+                Layer.iOS = Layer.Quest;
+                StaticEditorFlags.iOS = StaticEditorFlags.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             GameObject component = (GameObject)type;

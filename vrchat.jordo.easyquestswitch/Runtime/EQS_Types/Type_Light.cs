@@ -34,14 +34,30 @@ namespace EasyQuestSwitch.Types
             RenderMode.Setup(component.renderMode);
         }
 
-        public override void Setup(Object type, int currentVersion)
+        public override void Upgrade(Object type, int currentVersion)
         {
+            base.Upgrade(type, currentVersion);
             Light component = (Light)type;
-            if (currentVersion == 0) // 0 -> 131 upgrade
+            // Bug: This upgrade code was never called originally.
+            // This is due to a typo in a conditional that snuck in.
+            // It's probably too late to fix it this way.
+            if (currentVersion < EQS_Data.UpdateFixMatsAndLights)
             {
                 LightType.Setup(component.type);
                 Range.Setup(component.range);
                 RenderMode.Setup(component.renderMode);
+            }
+
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                LightType.iOS = LightType.Quest;
+                Range.iOS = Range.Quest;
+                Color.iOS = Color.Quest;
+                Mode.iOS = Mode.Quest;
+                Intensity.iOS = Intensity.Quest;
+                IndirectMultiplier.iOS = IndirectMultiplier.Quest;
+                ShadowType.iOS = ShadowType.Quest;
+                RenderMode.iOS = RenderMode.Quest;
             }
         }
 

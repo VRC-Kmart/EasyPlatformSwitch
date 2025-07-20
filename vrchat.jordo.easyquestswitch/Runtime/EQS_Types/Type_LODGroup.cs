@@ -36,6 +36,27 @@ namespace EasyQuestSwitch.Types
             }
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Enabled.iOS = Enabled.Quest;
+                FadeMode.iOS = FadeMode.Quest;
+                AnimateCrossFading.iOS = AnimateCrossFading.Quest;
+                foreach (var sharedFloat in Percentage)
+                {
+                    sharedFloat.iOS = sharedFloat.Quest;
+                }
+
+                foreach (var sharedFloat in FadeTransitionWidth)
+                {
+                    sharedFloat.iOS = sharedFloat.Quest;
+                }
+            }
+
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             LODGroup component = (LODGroup)type;

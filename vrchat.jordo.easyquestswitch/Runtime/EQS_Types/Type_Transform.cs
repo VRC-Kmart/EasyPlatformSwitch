@@ -23,6 +23,16 @@ namespace EasyQuestSwitch.Types
             Scale.Setup(component.localScale);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Position.iOS = Position.Quest;
+                Rotation.iOS = Rotation.Quest;
+                Scale.iOS = Scale.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             Transform component = (Transform)type;

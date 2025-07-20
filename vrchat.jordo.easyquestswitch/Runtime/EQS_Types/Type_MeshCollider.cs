@@ -22,6 +22,16 @@ namespace EasyQuestSwitch.Types
             SharedMesh.Setup(component.sharedMesh);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            base.Upgrade(type, currentVersion);
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Convex.iOS = Convex.Quest;
+                SharedMesh.iOS = SharedMesh.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             MeshCollider component = (MeshCollider)type;

@@ -26,13 +26,21 @@ namespace EasyQuestSwitch.Types
             GPUInstancing.Setup(material.enableInstancing);
         }
 
-        public override void Setup(Object type, int currentVersion)
+        public override void Upgrade(Object type, int currentVersion)
         {
             Material material = (Material)type;
-            if (currentVersion == 0) // 0 -> 131 upgrade
+            if (currentVersion < EQS_Data.UpdateFixMatsAndLights)
             {
                 MainColor.Setup(material.color);
                 GPUInstancing.Setup(material.enableInstancing);
+            }
+
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Shader.iOS = Shader.Quest;
+                MainColor.iOS = MainColor.Quest;
+                GPUInstancing.iOS = GPUInstancing.Quest;
+                ShaderPath.iOS = ShaderPath.Quest;
             }
         }
 
@@ -49,6 +57,9 @@ namespace EasyQuestSwitch.Types
                     case BuildTarget.Android:
                         ShaderPath.Quest = Shader.Get(buildTarget).name;
                         break;
+                    case BuildTarget.iOS:
+                        ShaderPath.iOS = Shader.Get(buildTarget).name;
+                        break;
                 }
             }
             else if(Shader.Get(buildTarget) == null && !string.IsNullOrEmpty(ShaderPath.Get(buildTarget)))
@@ -60,6 +71,9 @@ namespace EasyQuestSwitch.Types
                         break;
                     case BuildTarget.Android:
                         Shader.Quest = UnityEngine.Shader.Find(ShaderPath.Quest);
+                        break;
+                    case BuildTarget.iOS:
+                        Shader.iOS = UnityEngine.Shader.Find(ShaderPath.iOS);
                         break;
                 }
             }

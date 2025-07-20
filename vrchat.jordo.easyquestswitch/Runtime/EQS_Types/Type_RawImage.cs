@@ -25,6 +25,17 @@ namespace EasyQuestSwitch.Types
             Material.Setup(component.material);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            base.Upgrade(type, currentVersion);
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Texture.iOS = Texture.Quest;
+                Color.iOS = Color.Quest;
+                Material.iOS = Material.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             base.Process(type, buildTarget);

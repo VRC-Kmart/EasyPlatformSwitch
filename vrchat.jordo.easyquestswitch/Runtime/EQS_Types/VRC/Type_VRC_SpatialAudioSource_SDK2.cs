@@ -1,8 +1,10 @@
 #if UNITY_EDITOR && VRC_SDK_VRCSDK2
+using System;
 using UnityEditor;
 using UnityEngine;
 using VRCSDK2;
 using EasyQuestSwitch.Fields;
+using Object = UnityEngine.Object;
 
 namespace EasyQuestSwitch.Types
 {
@@ -26,6 +28,18 @@ namespace EasyQuestSwitch.Types
             Near.Setup(component.Near);
             VolumetricRadius.Setup(component.VolumetricRadius);
             EnableSpatialization.Setup(component.EnableSpatialization);
+        }
+
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Gain.iOS = Gain.Quest;
+                Far.iOS = Far.Quest;
+                Near.iOS = Near.Quest;
+                VolumetricRadius.iOS = VolumetricRadius.Quest;
+                EnableSpatialization.iOS = EnableSpatialization.Quest;
+            }
         }
 
         public override void Process(Object type, BuildTarget buildTarget)

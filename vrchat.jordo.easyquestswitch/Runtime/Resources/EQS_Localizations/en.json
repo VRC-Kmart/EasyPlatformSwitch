@@ -7,6 +7,7 @@
 	"SettingsListFormat": "List format",
 	"SettingsListFormatArray": [ "Simple (faster)", "Reorderable (slower)" ],
 	"SettingsApplyPC": "Force apply PC settings",
+	"SettingsApplyiOS": "Force apply iOS settings",
 	"SettingsApplyQuest": "Force apply Quest settings",
 	"SettingsRemoveEQS": "Remove Easy Quest Switch from the scene",
 	"SettingsCacheWarning": "Your cache server is not enabled, you may experience long switching times! It is best to set it to local or remote. (Remote requires additional steps)",

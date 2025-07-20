@@ -61,6 +61,7 @@ namespace EasyQuestSwitch
                     headerBG.SetPixel(0, 0, new Color(0.15f, 0.5f, 0.75f));
                     break;
                 case BuildTarget.Android:
+                case BuildTarget.iOS:
                     headerBG.SetPixel(0, 0, new Color(0, 0.8f, 0.3f));
                     break;
                 default:
@@ -440,6 +441,7 @@ namespace EasyQuestSwitch
                     {
                         if (GUILayout.Button(EQS_Localization.Current.SettingsApplyPC)) data.ApplyTarget(BuildTarget.StandaloneWindows64);
                         if (GUILayout.Button(EQS_Localization.Current.SettingsApplyQuest)) data.ApplyTarget(BuildTarget.Android);
+                        if (GUILayout.Button(EQS_Localization.Current.SettingsApplyiOS)) data.ApplyTarget(BuildTarget.iOS);
                     }
                     if (GUILayout.Button(EQS_Localization.Current.SettingsRemoveEQS, GUILayout.Height(32)))
                     {

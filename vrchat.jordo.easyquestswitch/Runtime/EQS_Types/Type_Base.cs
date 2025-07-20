@@ -1,4 +1,4 @@
-﻿#if UNITY_EDITOR
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 
@@ -9,8 +9,7 @@ namespace EasyQuestSwitch.Types
     {
         public abstract void Setup(Object type);
         
-        // Override without calling base to setup custom migration
-        public virtual void Setup(Object type, int currentVersion) => Setup(type);
+        public abstract void Upgrade(Object type, int currentVersion);
         
         public abstract void Process(Object type, BuildTarget buildTarget);
     }

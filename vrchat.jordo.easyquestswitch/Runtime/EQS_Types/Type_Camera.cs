@@ -26,6 +26,18 @@ namespace EasyQuestSwitch.Types
             OcclusionCulling.Setup(component.useOcclusionCulling);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            base.Upgrade(type, currentVersion);
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                ClippingPlaneNear.iOS = ClippingPlaneNear.Quest;
+                ClippingPlaneFar.iOS = ClippingPlaneFar.Quest;
+                TargetTexture.iOS = TargetTexture.Quest;
+                OcclusionCulling.iOS = OcclusionCulling.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             base.Process(type, buildTarget);

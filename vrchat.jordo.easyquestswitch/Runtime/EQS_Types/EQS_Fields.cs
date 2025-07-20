@@ -14,10 +14,11 @@ namespace EasyQuestSwitch.Fields
     {
         public T PC;
         public T Quest;
+        public T iOS;
 
         public void Setup(T obj)
         {
-            PC = Quest = obj;
+            PC = Quest = iOS = obj;
         }
 
         public T Get(BuildTarget buildTarget)
@@ -28,6 +29,8 @@ namespace EasyQuestSwitch.Fields
                     return PC;
                 case BuildTarget.Android:
                     return Quest;
+                case BuildTarget.iOS:
+                    return iOS;
                 default:
                     return default(T);
             }

@@ -22,6 +22,16 @@ namespace EasyQuestSwitch.Types
             Radius.Setup(component.radius);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            base.Upgrade(type, currentVersion);
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Center.iOS = Center.Quest;
+                Radius.iOS = Radius.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             base.Process(type, buildTarget);

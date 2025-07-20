@@ -1,4 +1,4 @@
-﻿#if UNITY_EDITOR
+#if UNITY_EDITOR
 using System;
 using System.Collections.Generic;
 using UnityEditor;
@@ -26,7 +26,12 @@ namespace EasyQuestSwitch
 
         public List<Data> Objects;
         public int version = 0;
-        private const int currentVersion = 131;
+
+        public const int UpdateFixMatsAndLights = 131;
+        public const int UpdateAddIOS = 141;
+        
+        private const int currentVersion = UpdateAddIOS;
+        
 
         public void ValidateData(int index)
         {
@@ -121,10 +126,7 @@ namespace EasyQuestSwitch
                 {
                     if (d.Type != null)
                     {
-                        if(d.Type.GetType() == typeof(Type_Material) || d.Type.GetType() == typeof(Type_Material)) 
-                        {
-                            d.Type.Setup(d.Target, version);
-                        }
+                        d.Type.Upgrade(d.Target, version);
                     }
                 }
                 version = currentVersion;
@@ -150,7 +152,7 @@ namespace EasyQuestSwitch
         
         public void ApplyTarget(BuildTarget newTarget)
         {
-            if(newTarget == BuildTarget.StandaloneWindows64 || newTarget == BuildTarget.Android)
+            if(newTarget == BuildTarget.StandaloneWindows64 || newTarget == BuildTarget.Android || newTarget == BuildTarget.iOS)
             {
                 for(int i = 0; i < Objects.Count; i++)
                 {

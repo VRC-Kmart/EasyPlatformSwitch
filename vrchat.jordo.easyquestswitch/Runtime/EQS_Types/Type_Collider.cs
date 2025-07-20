@@ -20,6 +20,15 @@ namespace EasyQuestSwitch.Types
             Enabled.Setup(component.enabled);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Enabled.iOS = Enabled.Quest;
+                IsTrigger.iOS = IsTrigger.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             Collider component = (Collider)type;

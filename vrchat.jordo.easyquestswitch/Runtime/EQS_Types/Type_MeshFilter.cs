@@ -19,6 +19,14 @@ namespace EasyQuestSwitch.Types
             Mesh.Setup(component.sharedMesh);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Mesh.iOS = Mesh.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             MeshFilter component = (MeshFilter)type;

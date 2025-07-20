@@ -28,6 +28,18 @@ namespace EasyQuestSwitch.Types
             FilterMode.Setup(component.filterMode);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Size.iOS = Size.Quest;
+                AntiAliasing.iOS = AntiAliasing.Quest;
+                DepthBuffer.iOS = DepthBuffer.Quest;
+                EnableMipMaps.iOS = EnableMipMaps.Quest;
+                FilterMode.iOS = FilterMode.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             RenderTexture component = (RenderTexture)type;

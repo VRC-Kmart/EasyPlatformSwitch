@@ -23,6 +23,16 @@ namespace EasyQuestSwitch.Types
             ReferencePixelsPerUnit.Setup(component.referencePixelsPerUnit);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            base.Upgrade(type, currentVersion);
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                ScaleFactor.iOS = ScaleFactor.Quest;
+                ReferencePixelsPerUnit.iOS = ReferencePixelsPerUnit.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             base.Process(type, buildTarget);

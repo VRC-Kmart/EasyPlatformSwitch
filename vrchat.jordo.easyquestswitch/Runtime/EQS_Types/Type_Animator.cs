@@ -22,6 +22,16 @@ namespace EasyQuestSwitch.Types
             CullingMode.Setup(component.cullingMode);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            base.Upgrade(type, currentVersion);
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Controller.iOS = Controller.Quest;
+                CullingMode.iOS = CullingMode.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             base.Process(type, buildTarget);

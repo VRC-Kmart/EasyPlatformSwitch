@@ -19,6 +19,14 @@ namespace EasyQuestSwitch.Types
             Enabled.Setup(component.enabled);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Enabled.iOS = Enabled.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             Behaviour component = (Behaviour)type;

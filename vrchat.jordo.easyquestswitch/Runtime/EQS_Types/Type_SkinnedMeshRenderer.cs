@@ -22,6 +22,16 @@ namespace EasyQuestSwitch.Types
             UpdateWhenOffscreen.Setup(component.updateWhenOffscreen);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            base.Upgrade(type, currentVersion);
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Mesh.iOS = Mesh.Quest;
+                UpdateWhenOffscreen.iOS = UpdateWhenOffscreen.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             base.Process(type, buildTarget);

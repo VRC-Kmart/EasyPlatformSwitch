@@ -7,6 +7,7 @@
 	"SettingsListFormat": "Formato de lista",
 	"SettingsListFormatArray": [ "Simple (rápido)", "Reordenable (lento)" ],
 	"SettingsApplyPC": "Forzar aplicación de ajustes de PC",
+	"SettingsApplyiOS": "Forzar aplicación de ajustes de iOS",
 	"SettingsApplyQuest": "Forzar aplicación de ajustes de Quest",
 	"SettingsRemoveEQS": "Remover Easy Quest Switch de la escena",
 	"SettingsCacheWarning": "Tu servidor de cache no está habilitado, puedes experimentar largos tiempos de cambio! Es mejor establecerlo a local o remoto. (Remoto requiere pasos adicionales)",

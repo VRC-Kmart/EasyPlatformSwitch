@@ -32,6 +32,21 @@ namespace EasyQuestSwitch.Types
             BypassReverbZones.Setup(component.bypassReverbZones);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            base.Upgrade(type, currentVersion);
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                AudioClip.iOS = AudioClip.Quest;
+                Volume.iOS = Volume.Quest;
+                SpatialBlend.iOS = SpatialBlend.Quest;
+                ReverbZoneMix.iOS = ReverbZoneMix.Quest;
+                BypassEffects.iOS = BypassEffects.Quest;
+                BypassListenreEffects.iOS = BypassListenreEffects.Quest;
+                BypassReverbZones.iOS = BypassReverbZones.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             base.Process(type, buildTarget);

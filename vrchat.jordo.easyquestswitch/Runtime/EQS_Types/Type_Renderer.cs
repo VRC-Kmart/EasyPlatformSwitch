@@ -39,6 +39,24 @@ namespace EasyQuestSwitch.Types
             }
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Enabled.iOS = Enabled.Quest;
+                LightProbes.iOS = LightProbes.Quest;
+                AnchorOverride.iOS = AnchorOverride.Quest;
+                ReflectionProbes.iOS = ReflectionProbes.Quest;
+                CastShadows.iOS = CastShadows.Quest;
+                ReceiveShadows.iOS = ReceiveShadows.Quest;
+                DynamicOccluded.iOS = DynamicOccluded.Quest;
+                foreach (var sharedMaterial in Materials)
+                {
+                    sharedMaterial.iOS = sharedMaterial.Quest;
+                }
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
 

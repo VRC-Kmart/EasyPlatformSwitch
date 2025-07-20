@@ -7,6 +7,7 @@
 	"SettingsListFormat": "列表格式",
 	"SettingsListFormatArray": [ "Simple (较快)", "Reorderable (较慢)" ],
 	"SettingsApplyPC": "强制应用PC设置",
+	"SettingsApplyiOS": "强制应用iOS设置",
 	"SettingsApplyQuest": "强制应用Quest设置",
 	"SettingsRemoveEQS": "从场景中从移除 Easy Quest Switch",
 	"SettingsCacheWarning": "缓存服务器未启用，您可能需要较长的切换时间！最好将其设置为本地或远程。（远程操作需要额外的步骤）",

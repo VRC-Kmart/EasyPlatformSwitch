@@ -22,6 +22,17 @@ namespace EasyQuestSwitch.Types
             Center.Setup(component.center);
         }
 
+        public override void Upgrade(Object type, int currentVersion)
+        {
+            base.Upgrade(type, currentVersion);
+
+            if (currentVersion < EQS_Data.UpdateAddIOS)
+            {
+                Size.iOS = Size.Quest;
+                Center.iOS = Center.Quest;
+            }
+        }
+
         public override void Process(Object type, BuildTarget buildTarget)
         {
             base.Process(type, buildTarget);
