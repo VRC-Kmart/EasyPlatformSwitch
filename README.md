@@ -9,4 +9,4 @@ It is possible to create your own localizations by creating a new JSON file in E
 ## Adding custom Types
 No tutorial at the moment but you can check EasyPlatformSwitch/EQS_Types/ and try to figure it out.
 
-![](https://i.imgur.com/aYvf4yl.png)
+<img width="3132" height="1440" alt="EasyPlatformSwitch Image" src="https://github.com/user-attachments/assets/c63872a2-d1bc-41f7-8209-56872ddf64a1" />
