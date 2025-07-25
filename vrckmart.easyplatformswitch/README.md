@@ -6,7 +6,7 @@ This is a fork of a fork of EasyQuestSwitch. We forked [this version by bdragon2
 
 ## Adding a new localization
 
-It is possible to create your own localizations by creating a new JSON file in `EasyPlatoformSwitch/Resources/EQS_Localizations/`, use `en.json` as a template. We encourage you to make a pull request for new and/or improved localizations!
+It is possible to create your own localizations by creating a new JSON file in `EasyPlatformSwitch/Resources/EQS_Localizations/`, use `en.json` as a template. We encourage you to make a pull request for new and/or improved localizations!
 
 ## Adding custom Types
 
